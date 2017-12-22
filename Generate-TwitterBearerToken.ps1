@@ -34,5 +34,5 @@ function Obtain-BearerToken($secrets)
 }
 
 $encoded = Generate-Base64Encoding($ConsumerKey, $ConsumerSecret)
-$bearerToken = Obtain-BearerToken($encoded)
-Write-Output $bearerToken
+Obtain-BearerToken($encoded) | Set-Clipboard
+Write-Output "Twitter bearer token should now be on your clipboard"
